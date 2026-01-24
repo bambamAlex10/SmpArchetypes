@@ -20,6 +20,10 @@ import com.mc3699.smparch.archetype.john_ultrakill.UltrakillSlamAbility;
 import com.mc3699.smparch.archetype.miku.*;
 import com.mc3699.smparch.archetype.nightheart.RandomTeleportAbility;
 import com.mc3699.smparch.archetype.pencil_html.EndStepAbility;
+import com.mc3699.smparch.archetype.pinky.ChaoticSurge;
+import com.mc3699.smparch.archetype.pinky.HolyLight;
+import com.mc3699.smparch.archetype.pinky.HolyLight;
+import com.mc3699.smparch.archetype.pinky.VoidBlitz;
 import com.mc3699.smparch.archetype.terra.HeartbeatAbility;
 import com.mc3699.smparch.archetype.terra.SolarSurgeAbility;
 import com.mc3699.smparch.generic_abilities.DashAbility;
@@ -105,6 +109,12 @@ public class SMPAbilities {
             ABILITIES.register("end_step", EndStepAbility::new);
     public static final Supplier<SkulkBlastAbility> SKULK_BLAST =
             ABILITIES.register("skulk_blast", SkulkBlastAbility::new);
+    public static final Supplier<HolyLight> HEALING_LIGHT =
+            ABILITIES.register("holy_light", HolyLight::new);
+    public static final Supplier<VoidBlitz> VOID_BLITZ =
+            ABILITIES.register("void_blitz", VoidBlitz::new);
+    public static final Supplier<ChaoticSurge> ChaoticSurge =
+            ABILITIES.register("chaotic_surge", ChaoticSurge::new);
 
     public static final Supplier<WardenSkinAbility> WARDEN_SKIN =
             ABILITIES.register("warden_skin", WardenSkinAbility::new);

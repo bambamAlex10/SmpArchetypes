@@ -11,6 +11,7 @@ import com.mc3699.smparch.archetype.john_ultrakill.JohnUltrakillArchetype;
 import com.mc3699.smparch.archetype.miku.MikuArchetype;
 import com.mc3699.smparch.archetype.nightheart.NightheartArchetype;
 import com.mc3699.smparch.archetype.pencil_html.PencilHtmlArchetype;
+import com.mc3699.smparch.archetype.pinky.PinkyArchetype;
 import com.mc3699.smparch.archetype.tekkitdooood.TekkitdoooodArchetype;
 import com.mc3699.smparch.archetype.terra.TerraArchetype;
 import net.mc3699.provenance.ProvenanceRegistries;
@@ -25,6 +26,9 @@ public class SMPArchetypes {
     public static final DeferredRegister<BaseArchetype> ARCHETYPES =
             DeferredRegister.create(ProvenanceRegistries.ARCHETYPE_REGISTRY, SMPArch.MODID);
 
+
+    public static final Supplier<PinkyArchetype> PINKY = 
+            ARCHETYPES.register("pinky", PinkyArchetype::new);
 
     public static final Supplier<NightheartArchetype> NIGHTHEART =
             ARCHETYPES.register("nightheart", NightheartArchetype::new);
