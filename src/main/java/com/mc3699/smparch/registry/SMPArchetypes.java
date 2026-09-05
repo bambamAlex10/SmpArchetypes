@@ -1,22 +1,31 @@
 package com.mc3699.smparch.registry;
 
 import com.mc3699.smparch.SMPArch;
-import com.mc3699.smparch.archetype.aidenman.AidenArchetype;
-import com.mc3699.smparch.archetype.arveral.ArveralArchetype;
-import com.mc3699.smparch.archetype.blox.BloxArchetype;
-import com.mc3699.smparch.archetype.firelight.FirelightArchetype;
-import com.mc3699.smparch.archetype.growth.GrowthArchetype;
-import com.mc3699.smparch.archetype.heaven.HeavenArchetype;
-import com.mc3699.smparch.archetype.john_ultrakill.JohnUltrakillArchetype;
-import com.mc3699.smparch.archetype.miku.MikuArchetype;
-import com.mc3699.smparch.archetype.nightheart.NightheartArchetype;
-import com.mc3699.smparch.archetype.pencil_html.PencilHtmlArchetype;
-import com.mc3699.smparch.archetype.pinky.PinkyArchetype;
-import com.mc3699.smparch.archetype.tekkitdooood.TekkitdoooodArchetype;
-import com.mc3699.smparch.archetype.terra.TerraArchetype;
+import com.mc3699.smparch.archetype.fictionalbeef.alivealex.AliveAlexArchetype;
+import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.BigManRakeArchetype;
+import com.mc3699.smparch.archetype.fictionalbeef.drrapscallion.DRRapScallion_Archetype;
+import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.FlameK1ng_Archetype;
+import com.mc3699.smparch.archetype.fictionalbeef.jkmc.JkmcArchetype;
+import com.mc3699.smparch.archetype.fictionalbeef.pinky.PinkyArchetype;
+import com.mc3699.smparch.archetype.fictionalbeef.scapune.ScapuneArchetype;
+import com.mc3699.smparch.archetype.fictionalbeef.ykorio.YkorioArchetype;
+import com.mc3699.smparch.archetype.tbs.aidenman.AidenArchetype;
+import com.mc3699.smparch.archetype.tbs.arveral.ArveralArchetype;
+import com.mc3699.smparch.archetype.tbs.blox.BloxArchetype;
+import com.mc3699.smparch.archetype.tbs.firelight.FirelightArchetype;
+import com.mc3699.smparch.archetype.tbs.growth.GrowthArchetype;
+import com.mc3699.smparch.archetype.tbs.heaven.HeavenArchetype;
+import com.mc3699.smparch.archetype.tbs.john_ultrakill.JohnUltrakillArchetype;
+import com.mc3699.smparch.archetype.tbs.miku.MikuArchetype;
+import com.mc3699.smparch.archetype.tbs.nightheart.NightheartArchetype;
+import com.mc3699.smparch.archetype.tbs.pencil_html.PencilHtmlArchetype;
+import com.mc3699.smparch.archetype.tbs.tekkitdooood.TekkitdoooodArchetype;
+import com.mc3699.smparch.archetype.tbs.terra.TerraArchetype;
+
 import net.mc3699.provenance.ProvenanceRegistries;
 import net.mc3699.provenance.archetype.foundation.BaseArchetype;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.util.FakePlayer;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -62,11 +71,34 @@ public class SMPArchetypes {
 
     public static final Supplier<TekkitdoooodArchetype> TEKKITDOOOOD =
             ARCHETYPES.register("tekkitdooood", TekkitdoooodArchetype::new);
+
     public static final Supplier<MikuArchetype> MIKU =
             ARCHETYPES.register("miku", MikuArchetype::new);
+
+    public static final Supplier<BigManRakeArchetype> BigManrake =
+            ARCHETYPES.register("bigmanrake", BigManRakeArchetype::new);
+
+    public static final Supplier<AliveAlexArchetype> AliveAlex = 
+        ARCHETYPES.register("alivealex",AliveAlexArchetype::new);
+
+    public static final Supplier<FlameK1ng_Archetype> FlameK1ng_ = 
+        ARCHETYPES.register("flamek1ng_",FlameK1ng_Archetype::new);
+
+    public static final Supplier<DRRapScallion_Archetype> DRRapScallion = 
+        ARCHETYPES.register("drrapscallion",DRRapScallion_Archetype::new);
+
+    public static final Supplier<JkmcArchetype> JKMC = 
+        ARCHETYPES.register("jkmc",JkmcArchetype::new);
+
+    public static final Supplier<ScapuneArchetype> Scapune = 
+        ARCHETYPES.register("scapune",ScapuneArchetype::new);
+
+    public static final Supplier<YkorioArchetype> Ykorio = 
+        ARCHETYPES.register("ykorio",YkorioArchetype::new);
 
     public static void register(IEventBus eventBus)
     {
         ARCHETYPES.register(eventBus);
     }
+    
 }

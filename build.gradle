@@ -12,6 +12,10 @@ repositories {
     mavenLocal()
     maven { url "https://cursemaven.com" }
     maven { url "https://maven.thebrokenscript.net/snapshots"}
+    maven { 
+        name = "DevAuth"
+        url = "https://pkgs.dev.azure.com/djtheredstoner/DevAuth/_packaging/public/maven/v1" 
+    }
 }
 
 base {
@@ -37,14 +41,29 @@ neoForge {
     runs {
         client {
             client()
-
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
+            systemProperty "devauth.configDir", "/home/alex/Desktop/CodingProjects/Java/DevAuthTokens/main"
+            systemProperty "devauth.enabled", "true" 
+            systemProperty "devauth.account", "main" 
+
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+        client2 {
+            client()
+            // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
+
+            gameDirectory = project.file('runs/client2')
+
+            systemProperty "devauth.configDir", "/home/alex/Desktop/CodingProjects/Java/DevAuthTokens/alt"
+            systemProperty "devauth.enabled", "true" 
+            systemProperty "devauth.account", "alt" 
+
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
 
         server {
             server()
-            programArgument '--nogui'
+            gameDirectory = project.file('runs/server')
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
 
@@ -104,6 +123,7 @@ dependencies {
     // compileOnly "mezz.jei:jei-${mc_version}-forge-api:${jei_version}"
     // runtimeOnly "mezz.jei:jei-${mc_version}-forge:${jei_version}"
 
+    runtimeOnly "me.djtheredstoner:DevAuth-neoforge:1.2.1"
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
     // The group id is ignored when searching -- in this case, it is "blank"
@@ -115,9 +135,7 @@ dependencies {
     // Example project dependency using a sister or child project:
     // implementation project(":myproject")
 
-    implementation ("net.mc3699:provenance:2.2")
-    implementation ("curse.maven:customizable-player-models-439870:6787917")
-
+    implementation ("net.mc3699:provenance:2.9")
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html

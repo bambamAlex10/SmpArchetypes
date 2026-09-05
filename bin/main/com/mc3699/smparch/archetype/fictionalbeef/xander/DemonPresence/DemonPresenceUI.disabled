@@ -1,0 +1,280 @@
+package com.mc3699.smparch.archetype.fictionalbeef.xander.DemonPresence;
+
+import com.mc3699.smparch.archetype.fictionalbeef.scapune.ScapuneAttachments;
+import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversAwareness.DecieversAwarenessHandlers;
+import com.mc3699.smparch.registry.SMPAttachments;
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.vertex.*;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.RenderStateShard;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.util.RandomSource;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.neoforge.client.event.RenderGuiEvent;
+import net.neoforged.neoforge.client.event.RenderGuiLayerEvent;
+import net.neoforged.neoforge.client.event.ScreenEvent;
+
+import java.util.Optional;
+
+import org.joml.Matrix4f;
+
+@EventBusSubscriber(modid = "smparch", value = Dist.CLIENT)
+public class DemonPresenceUI {
+
+    private static final RandomSource RANDOM = RandomSource.create();
+    private static final ResourceLocation DUMMY = ResourceLocation.withDefaultNamespace("missingno");
+    private static final float Division = 100f;
+    private static float cachedAwareness = 0.0f;
+
+    @SubscribeEvent
+    public static void onClientTick(ClientTickEvent.Post event) {
+        LocalPlayer player = Minecraft.getInstance().player;
+        if (player != null && player.hasData(ScapuneAttachments.DECIEVERS_AWARENESS)) {
+            cachedAwareness = player.getData(ScapuneAttachments.DECIEVERS_AWARENESS);
+        } else {
+            cachedAwareness = Math.clamp(cachedAwareness - DecieversAwarenessHandlers.decieverAwarenessDecrease,
+                    DecieversAwarenessHandlers.decieverAwarenessMinimum,
+                    DecieversAwarenessHandlers.decieverAwarenessMaximum);
+        }
+    }
+
+    private static RenderType glitchRenderType(int texId) {
+        RenderStateShard.TextureStateShard textureShard = new RenderStateShard.TextureStateShard(DUMMY, false, false) {
+            @Override
+            public void setupRenderState() {
+                RenderSystem.setShaderTexture(0, texId);
+            }
+
+            @Override
+            public void clearRenderState() {
+                /* no-op */ }
+        };
+
+        RenderType.CompositeState state = RenderType.CompositeState.builder()
+                .setShaderState(RenderStateShard.POSITION_TEX_SHADER)
+                .setTextureState(textureShard)
+                .setTransparencyState(RenderStateShard.TRANSLUCENT_TRANSPARENCY)
+                .setDepthTestState(RenderStateShard.NO_DEPTH_TEST)
+                // .setWriteMaskState(RenderStateShard.COLOR_WRITE)
+                .setCullState(RenderStateShard.NO_CULL)
+                .setLightmapState(RenderStateShard.NO_LIGHTMAP)
+                .setOverlayState(RenderStateShard.NO_OVERLAY)
+                .setLayeringState(RenderStateShard.VIEW_OFFSET_Z_LAYERING)
+                .createCompositeState(false);
+
+        return RenderType.create(
+                "glitch_framebuffer",
+                DefaultVertexFormat.POSITION_TEX,
+                VertexFormat.Mode.QUADS,
+                256, false, false, state);
+    }
+
+    public static void artifacting(GuiGraphics graphics) {
+        graphics.pose().pushPose();
+        graphics.pose().translate(0, 0, 1000); // above any widget/tooltip z
+        try {
+            Minecraft mc = Minecraft.getInstance();
+
+            // GuiGraphics graphics = event.getGuiGraphics();
+            int screenWidth = mc.getWindow().getGuiScaledWidth();
+            int screenHeight = mc.getWindow().getGuiScaledHeight();
+            int texId = mc.getMainRenderTarget().getColorTextureId();
+            int fbWidth = mc.getWindow().getWidth();
+            int fbHeight = mc.getWindow().getHeight();
+            double guiScale = mc.getWindow().getGuiScale();
+
+            float t = Math.min(cachedAwareness, DecieversAwarenessHandlers.decieverAwarenessMaximum)
+                    / DecieversAwarenessHandlers.decieverAwarenessMaximum; // clean 0..1
+
+            int passes = 2 + (int) (t * t * 40);
+            for (int p = 0; p < passes; p++) {
+                int[] weightedCases = { 0, 0, 2, 2, 5, 5, 6, 6, 7, 7, 1, 3, 4 };
+                int artifactType = weightedCases[RANDOM.nextInt(weightedCases.length)];
+
+                switch (artifactType) {
+                    case 0 -> { /* ... unchanged ... */
+                        int tiles = 4 + RANDOM.nextInt(12);
+                        for (int i = 0; i < tiles; i++) {
+                            int tileSize = (int) ((8 + RANDOM.nextInt(24)) * guiScale);
+                            int dstX = RANDOM.nextInt(Math.max(1, fbWidth - tileSize));
+                            int dstY = RANDOM.nextInt(Math.max(1, fbHeight - tileSize));
+                            int srcX = RANDOM.nextInt(Math.max(1, fbWidth - tileSize));
+                            int srcY = RANDOM.nextInt(Math.max(1, fbHeight - tileSize));
+
+                            drawFramebufferSlice(graphics, texId,
+                                    (int) (dstX / guiScale), (int) (dstY / guiScale),
+                                    (int) (tileSize / guiScale), (int) (tileSize / guiScale),
+                                    srcX / (float) fbWidth, srcY / (float) fbHeight,
+                                    (srcX + tileSize) / (float) fbWidth, (srcY + tileSize) / (float) fbHeight);
+                        }
+                    }
+
+                    case 1 -> { /* ... unchanged ... */
+                        int blocks = 3 + RANDOM.nextInt(8);
+                        int[] garbageColors = { 0xFFFF00FF, 0xFF00FF00, 0xFF000000, 0xFFFFFFFF, 0xFF00FFFF };
+                        for (int i = 0; i < blocks; i++) {
+                            int w = 4 + RANDOM.nextInt(30);
+                            int h = 4 + RANDOM.nextInt(30);
+                            int bx = RANDOM.nextInt(Math.max(1, screenWidth - w));
+                            int by = RANDOM.nextInt(Math.max(1, screenHeight - h));
+                            graphics.fill(bx, by, bx + w, by + h, garbageColors[RANDOM.nextInt(garbageColors.length)]);
+                        }
+                    }
+                    case 2 -> { /* ... unchanged ... */
+                        int roll = (int) ((40 + RANDOM.nextInt(fbHeight / 2)));
+                        float split = roll / (float) fbHeight;
+                        int destRollH = (int) (roll / guiScale);
+                        int destW = (int) (fbWidth / guiScale);
+                        int destTotalH = (int) (fbHeight / guiScale);
+
+                        // bottom part of source drawn at top of screen
+                        drawFramebufferSlice(graphics, texId, 0, 0, destW, destTotalH - destRollH,
+                                0, split, 1, 1);
+                        // top part of source drawn at bottom
+                        drawFramebufferSlice(graphics, texId, 0, destTotalH - destRollH, destW, destRollH,
+                                0, 0, 1, split);
+                        // bright tear line at the seam
+                        graphics.fill(0, destTotalH - destRollH, destW, destTotalH - destRollH + 1, 0xFFFFFFFF);
+                    }
+                    case 3 -> {
+                        int regW = 20 + RANDOM.nextInt(60);
+                        int regH = 20 + RANDOM.nextInt(60);
+                        int rx = RANDOM.nextInt(Math.max(1, screenWidth - regW));
+                        int ry = RANDOM.nextInt(Math.max(1, screenHeight - regH));
+                        int grains = 150 + RANDOM.nextInt(200);
+                        for (int i = 0; i < grains; i++) {
+                            int px = rx + RANDOM.nextInt(regW);
+                            int py = ry + RANDOM.nextInt(regH);
+                            int v = RANDOM.nextInt(256);
+                            int c = 0xFF000000 | (v << 16) | (v << 8) | v; // greyscale grain
+                            graphics.fill(px, py, px + 1, py + 1, c);
+                        }
+                    }
+                    case 4 -> {
+                        int bandH = 2 + RANDOM.nextInt(4);
+                        int gap = bandH * 2;
+                        int startPhase = RANDOM.nextInt(gap);
+                        for (int yy = startPhase; yy < screenHeight; yy += gap) {
+                            graphics.fill(0, yy, screenWidth, yy + bandH, 0xAA000000); // translucent black
+                        }
+
+                        /* ... unchanged ... */ }
+                    case 5 -> {
+                        int sliceW = (int) ((20 + RANDOM.nextInt(40)) * guiScale);
+                        int sliceX = RANDOM.nextInt(fbWidth - sliceW);
+                        int offsetX = (int) ((RANDOM.nextInt(60) - 30) * guiScale);
+
+                        int destX = (int) ((sliceX + offsetX) / guiScale);
+                        int destW = (int) (sliceW / guiScale);
+                        int destH = (int) (fbHeight / guiScale);
+                        float u0 = sliceX / (float) fbWidth;
+                        float u1 = (sliceX + sliceW) / (float) fbWidth;
+
+                        drawFramebufferSlice(graphics, texId, destX, 0, destW, destH, u0, 0, u1, 1);
+
+                        int tearX = (int) (sliceX / guiScale);
+                        graphics.fill(tearX, 0, tearX + 2, destH, 0xFFFF00FF);
+                    }
+                    case 6 -> {
+                        int bandH = (int) ((20 + RANDOM.nextInt(40)) * guiScale);
+                        int bandY = RANDOM.nextInt(fbHeight - bandH);
+                        int offsetY = (int) ((RANDOM.nextInt(40) - 20) * guiScale);
+
+                        int destY = (int) ((bandY + offsetY) / guiScale);
+                        int destW = (int) (fbWidth / guiScale);
+                        int destH = (int) (bandH / guiScale);
+                        float v0 = bandY / (float) fbHeight;
+                        float v1 = (bandY + bandH) / (float) fbHeight;
+
+                        drawFramebufferSlice(graphics, texId, 0, destY, destW, destH, 0, v0, 1, v1);
+
+                        int tearY = (int) (bandY / guiScale);
+                        graphics.fill(0, tearY, destW, tearY + 2, 0xFFFF00FF);
+                    }
+                    case 7 -> {
+                        int offX = (int) ((RANDOM.nextInt(20) - 10) * guiScale);
+                        int offY = (int) ((RANDOM.nextInt(20) - 10) * guiScale);
+                        float alpha = 0.3f + RANDOM.nextFloat() * 0.4f;
+                        drawGhostImage(graphics, texId, screenWidth, screenHeight,
+                                offX, offY, alpha, guiScale);
+                    }
+                }
+            }
+        } finally {
+            graphics.pose().popPose();
+        }
+
+    }
+
+    private static boolean shouldGlitch() {
+        float t = Math.min(cachedAwareness, DecieversAwarenessHandlers.decieverAwarenessMaximum)
+                / DecieversAwarenessHandlers.decieverAwarenessMaximum;
+
+
+        return RANDOM.nextFloat() < (t * t);
+    }
+
+    @SubscribeEvent
+    public static void onRenderGui(RenderGuiEvent.Post event) {
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.level == null || mc.screen != null)
+            return;
+
+        if (shouldGlitch())
+            artifacting(event.getGuiGraphics());
+
+    }
+
+    @SubscribeEvent
+    public static void onScreenRender(ScreenEvent.Render.Post event) {
+        Minecraft mc = Minecraft.getInstance();
+        if (shouldGlitch())
+            artifacting(event.getGuiGraphics());
+    }
+
+    private static void drawFramebufferSlice(GuiGraphics graphics, int texId,
+            int x, int y, int w, int h,
+            float u0, float v0, float u1, float v1) {
+        RenderType type = glitchRenderType(texId);
+        MultiBufferSource.BufferSource source = graphics.bufferSource();
+        VertexConsumer consumer = source.getBuffer(type);
+        Matrix4f matrix = graphics.pose().last().pose();
+
+        consumer.addVertex(matrix, (float) x, (float) (y + h), 0.0F).setUv(u0, v1);// .setColor(1f, 1f, 1f, .2f);
+        consumer.addVertex(matrix, (float) (x + w), (float) (y + h), 0.0F).setUv(u1, v1);// .setColor(1f, 1f, 1f, .2f);
+        consumer.addVertex(matrix, (float) (x + w), (float) y, 0.0F).setUv(u1, v0);// .setColor(1f, 1f, 1f, .2f);
+        consumer.addVertex(matrix, (float) x, (float) y, 0.0F).setUv(u0, v0);// .setColor(1f, 1f, 1f, .2f);
+
+        source.endBatch();
+    }
+
+    private static void drawGhostImage(GuiGraphics graphics, int texId,
+            int screenWidth, int screenHeight,
+            int offX, int offY, float alpha, double guiScale) {
+        RenderType type = glitchRenderType(texId);
+        MultiBufferSource.BufferSource source = graphics.bufferSource();
+        VertexConsumer consumer = source.getBuffer(type);
+        Matrix4f matrix = graphics.pose().last().pose();
+
+        int dx = (int) (offX / guiScale);
+        int dy = (int) (offY / guiScale);
+
+        consumer.addVertex(matrix, (float) dx, (float) (screenHeight + dy), 0.0F)
+                .setUv(0.0F, 1.0F).setColor(1.0F, 1.0F, 1.0F, alpha);
+        consumer.addVertex(matrix, (float) (screenWidth + dx), (float) (screenHeight + dy), 0.0F)
+                .setUv(1.0F, 1.0F).setColor(1.0F, 1.0F, 1.0F, alpha);
+        consumer.addVertex(matrix, (float) (screenWidth + dx), (float) dy, 0.0F)
+                .setUv(1.0F, 0.0F).setColor(1.0F, 1.0F, 1.0F, alpha);
+        consumer.addVertex(matrix, (float) dx, (float) dy, 0.0F)
+                .setUv(0.0F, 0.0F).setColor(1.0F, 1.0F, 1.0F, alpha);
+
+        source.endBatch();
+    }
+}
