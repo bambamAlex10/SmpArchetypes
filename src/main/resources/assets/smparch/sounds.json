@@ -207,11 +207,26 @@
       }
     ]
   },
+  "birdsong1" : {
+    "sounds": [
+      {
+        "name": "smparch:birdsong1"
+      }
+    ]
+  },
 
   "chaoticsurge" : {
     "sounds": [
       {
         "name": "smparch:chaoticsurge"
+      }
+    ]
+  },
+
+  "birdsong2" : {
+    "sounds": [
+      {
+        "name": "smparch:birdsong2"
       }
     ]
   },
@@ -346,6 +361,22 @@
     "sounds": [
       {
         "name":"smparch:bigmanrake/concerto/symchoratk"
+      }
+    ]
+  },
+  
+  "birdsong3" : {
+    "sounds": [
+      {
+        "name": "smparch:birdsong3"
+      }
+    ]
+  },
+
+  "american_woodcock" : {
+    "sounds": [
+      {
+        "name": "smparch:american_woodcock"
       }
     ]
   }

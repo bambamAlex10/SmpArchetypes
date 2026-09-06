@@ -21,7 +21,12 @@ import com.mc3699.smparch.archetype.tbs.nightheart.NightheartArchetype;
 import com.mc3699.smparch.archetype.tbs.pencil_html.PencilHtmlArchetype;
 import com.mc3699.smparch.archetype.tbs.tekkitdooood.TekkitdoooodArchetype;
 import com.mc3699.smparch.archetype.tbs.terra.TerraArchetype;
-
+import com.mc3699.smparch.archetype.tbs.ariytwo6.AriytwoArchetype;
+import com.mc3699.smparch.archetype.tbs.emberflame65.EmberFlameArchetype;
+import com.mc3699.smparch.archetype.tbs.eyae.EyaeArchetype;
+import com.mc3699.smparch.archetype.tbs.john_generic.JohnArchetype;
+import com.mc3699.smparch.archetype.tbs.teebee.TeebeeArchetype;
+import com.mc3699.smparch.archetype.tbs.zorgoliath.HarkenerArchetype;
 import net.mc3699.provenance.ProvenanceRegistries;
 import net.mc3699.provenance.archetype.foundation.BaseArchetype;
 import net.neoforged.bus.api.IEventBus;
@@ -95,6 +100,23 @@ public class SMPArchetypes {
 
     public static final Supplier<YkorioArchetype> Ykorio = 
         ARCHETYPES.register("ykorio",YkorioArchetype::new);
+    public static final Supplier<EyaeArchetype> EYAE =
+            ARCHETYPES.register("eyae", EyaeArchetype::new);
+
+    public static final Supplier<JohnArchetype> JOHN_GENERIC =
+            ARCHETYPES.register("john_generic", JohnArchetype::new);
+
+    public static final Supplier<EmberFlameArchetype> EMBER_FLAME =
+            ARCHETYPES.register("ember_flame", EmberFlameArchetype::new);
+
+    public static final Supplier<HarkenerArchetype> HARKENER =
+            ARCHETYPES.register("harkener", HarkenerArchetype::new);
+
+    public static final Supplier<TeebeeArchetype> TEEBEE =
+            ARCHETYPES.register("teebee", TeebeeArchetype::new);
+
+    public static final Supplier<AriytwoArchetype> ARIYTWO =
+            ARCHETYPES.register("ariytwo6", AriytwoArchetype::new);
 
     public static void register(IEventBus eventBus)
     {

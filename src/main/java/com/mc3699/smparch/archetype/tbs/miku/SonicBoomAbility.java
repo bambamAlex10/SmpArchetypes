@@ -91,7 +91,7 @@ public class SonicBoomAbility extends BaseAbility {
 
         for(LivingEntity e : level.getEntitiesOfClass(LivingEntity.class, box))
             if(!(e == owner)) {
-                if (e.hurt(level.damageSources().sonicBoom(owner), 10.0F)) {
+                if (e.hurt(level.damageSources().sonicBoom(owner), 7.0F)) {
 
                     double y  = 0.5 * (1.0 - e.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
                     double xz = 2.5 * (1.0 - e.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));

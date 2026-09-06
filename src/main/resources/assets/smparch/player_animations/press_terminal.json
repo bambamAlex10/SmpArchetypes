@@ -1,0 +1,19 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "press_terminal": {
+      "loop": false,
+      "animation_length": 0.25,
+      "bones": {
+        "rightArm": {
+          "rotation": [0, 0, 22.5],
+          "position": {
+            "0.0": [0, 0, 0],
+            "0.125": [-1, -1, 0],
+            "0.25": [0, 0, 0]
+          }
+        }
+      }
+    }
+  }
+}

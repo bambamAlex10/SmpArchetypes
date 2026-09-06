@@ -13,6 +13,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.projectile.Fireball;
 import net.minecraft.world.entity.projectile.SmallFireball;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 public class FireballAbility extends BaseAbility {
 
@@ -47,6 +48,7 @@ public class FireballAbility extends BaseAbility {
         );
         fireball.setPos(spawnPos);
         fireball.setDeltaMovement(velocity);
+
         serverLevel.addFreshEntity(fireball);
 serverLevel.playSound(null, player.getBlockPosBelowThatAffectsMyMovement().above(1), SoundEvents.FIRECHARGE_USE, SoundSource.PLAYERS, 1, 1);
     }

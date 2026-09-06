@@ -1,36 +1,29 @@
-package com.mc3699.smparch.archetype.tbs.miku;
+package com.mc3699.smparch.archetype.eyae;
 
+import com.mc3699.smparch.SMPArch;
 import net.mc3699.provenance.ability.foundation.BaseAbility;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.network.PacketDistributor;
 
-public class SkulkBlastAbility extends BaseAbility {
+public class SummonBigHandsAbility extends BaseAbility {
     @Override
     public float getUseCost() {
-        return 0;
+        return 1f;
     }
 
     @Override
-    public int getCooldown() {
-        return 20;
-    }
+    public int getCooldown() { return 120; }
 
     @Override
     public Component getName() {
-        return Component.literal("Skulk Blast");
+        return Component.literal("Summon Big Hands");
     }
 
     @Override
     public void execute(ServerPlayer player) {
         super.execute(player);
-        Vec3 lookDir = player.getLookAngle();
-
-        Vec3 dashMotion = lookDir.multiply(0.9f, 0.9f, 0.9f);
-        player.setDeltaMovement(dashMotion);
-        player.hurtMarked = true;
-        player.fallDistance = 0;
     }
 
     @Override
@@ -40,6 +33,6 @@ public class SkulkBlastAbility extends BaseAbility {
 
     @Override
     public ResourceLocation getIcon() {
-        return ResourceLocation.fromNamespaceAndPath("minecraft","textures/block/sculk_vein.png");
+        return ResourceLocation.fromNamespaceAndPath(SMPArch.MODID, "textures/ability_icon/terminal.png");
     }
 }

@@ -34,13 +34,14 @@ public class SMPSounds {
 
     public static final Holder<SoundEvent> BLACKOUT = SOUNDS.register("blackout", SoundEvent::createVariableRangeEvent);
 
+    public static final Holder<SoundEvent> BIRDSONG1 = SOUNDS.register("birdsong1", SoundEvent::createVariableRangeEvent);
 
+    public static final Holder<SoundEvent> BIRDSONG2 = SOUNDS.register("birdsong2", SoundEvent::createVariableRangeEvent);
 
+    public static final Holder<SoundEvent> BIRDSONG3 = SOUNDS.register("birdsong3", SoundEvent::createVariableRangeEvent);
 
-    
+    public static final Holder<SoundEvent> AMERICAN_WOODCOCK = SOUNDS.register("american_woodcock", SoundEvent::createVariableRangeEvent);
 
-    
-    
     public static void register(IEventBus eventBus)
     {
         AliveAlexSounds.SOUNDS.register(eventBus);

@@ -1,34 +1,13 @@
 package com.mc3699.smparch.registry;
 
 import com.mc3699.smparch.SMPArch;
-import com.mc3699.smparch.archetype.fictionalbeef.alivealex.BloodofCovenant.BloodofCovenantAmbient;
-import com.mc3699.smparch.archetype.fictionalbeef.alivealex.Concurrent.ConcurrentAbility;
-import com.mc3699.smparch.archetype.fictionalbeef.alivealex.Retribution.RetributionAbility;
-import com.mc3699.smparch.archetype.fictionalbeef.alivealex.Salvation.SalvationAbility;
-import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.Accelerando.AccelerandoAbility;
-import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.AccesoMorendo.AccesoMorendoAmbient;
-import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.Concerto.ConcertoAbility;
-import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.Vibrato.VibratoAbility;
-import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.Brimstone.BrimstonePassive;
-import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.InvertedScale.InvertedScaleActive;
-import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.Pyrophagia.PyrophagiaPassive;
-import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.WaxenPinion.WaxenPinionActive;
-import com.mc3699.smparch.archetype.fictionalbeef.jkmc.ExplosionPassive.RezePassive;
-import com.mc3699.smparch.archetype.fictionalbeef.jkmc.OnDeath.RezeDeathPassive;
-import com.mc3699.smparch.archetype.fictionalbeef.jkmc.Propulsion.ExplosivePropulsion;
-import com.mc3699.smparch.archetype.fictionalbeef.jkmc.RezeLargeHit.RezeLargeHitAbility;
-import com.mc3699.smparch.archetype.fictionalbeef.pinky.CatLike;
-import com.mc3699.smparch.archetype.fictionalbeef.pinky.ChaoticSurge;
-import com.mc3699.smparch.archetype.fictionalbeef.pinky.HolyLight;
-import com.mc3699.smparch.archetype.fictionalbeef.pinky.VoidBlitz;
-import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversFury.DecieversFuryAbility;
-import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversGrace.DecieversGraceAbility;
-import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversWill.DecieversWillAbility;
-import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidCasino.VoidCasinoAmbient;
-import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidDomain.VoidDomainAmbient;
-import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidEssence.VoidEssenceAbility;
-import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidPresence.VoidPresenceAbility;
-import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidStep.VoidStepAbility;
+import com.mc3699.smparch.archetype.fictionalbeef.alivealex.*;
+import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.*;
+import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.*;
+import com.mc3699.smparch.archetype.fictionalbeef.jkmc.*;
+import com.mc3699.smparch.archetype.fictionalbeef.pinky.*;
+import com.mc3699.smparch.archetype.fictionalbeef.scapune.*;
+import com.mc3699.smparch.archetype.fictionalbeef.ykorio.*;
 import com.mc3699.smparch.archetype.tbs.aidenman.PhotosynthesisAbility;
 import com.mc3699.smparch.archetype.tbs.arveral.TendrilsAbility;
 import com.mc3699.smparch.archetype.tbs.blox.BloxDashAbility;
@@ -60,6 +39,18 @@ import com.mc3699.smparch.archetype.tbs.terra.SolarSurgeAbility;
 import com.mc3699.smparch.generic_abilities.DashAbility;
 import com.mc3699.smparch.generic_abilities.FireballAbility;
 import com.mc3699.smparch.generic_abilities.WallClimbAbility;
+import com.mc3699.smparch.archetype.tbs.ariytwo6.AriyhomeAbility;
+import com.mc3699.smparch.archetype.tbs.ariytwo6.GroundpunchAbility;
+import com.mc3699.smparch.archetype.tbs.ariytwo6.StrengthrandAbility;
+import com.mc3699.smparch.archetype.tbs.ariytwo6.WaterjumpAbility;
+import com.mc3699.smparch.archetype.tbs.emberflame65.*;
+import com.mc3699.smparch.archetype.tbs.eyae.SummonBigHandsAbility;
+import com.mc3699.smparch.archetype.tbs.teebee.AmplifyAbility;
+import com.mc3699.smparch.archetype.tbs.teebee.ReverseAbility;
+import com.mc3699.smparch.archetype.tbs.zorgoliath.HarkenTrueSight;
+import com.mc3699.smparch.archetype.tbs.zorgoliath.HarkenerSilentDash;
+import com.mc3699.smparch.archetype.tbs.zorgoliath.HarkenerWrathfulAdvance;
+import com.mc3699.smparch.generic_abilities.*;
 import net.mc3699.provenance.ProvenanceRegistries;
 import net.mc3699.provenance.ability.foundation.BaseAbility;
 import net.neoforged.bus.api.IEventBus;
@@ -71,7 +62,6 @@ public class SMPAbilities {
 
     public static final DeferredRegister<BaseAbility> ABILITIES =
             DeferredRegister.create(ProvenanceRegistries.ABILITY_REGISTRY, SMPArch.MODID);
-
 
     public static final Supplier<RandomTeleportAbility> RANDOM_TELEPORT =
             ABILITIES.register("random_teleport", RandomTeleportAbility::new);
@@ -198,8 +188,8 @@ public class SMPAbilities {
     public static final Supplier<DecieversGraceAbility> DECIVRSGRACE =
             ABILITIES.register("decievers_grace", DecieversGraceAbility::new);
             
-    public static final Supplier<com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversAwareness.DecieversAwarenessPassive> DECIVRSAWARENESS =
-            ABILITIES.register("decievers_awareness", com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversAwareness.DecieversAwarenessPassive::new);
+    public static final Supplier<com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversAwarenessPassive> DECIVRSAWARENESS =
+            ABILITIES.register("decievers_awareness", com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversAwarenessPassive::new);
 
     public static final Supplier<RezePassive> REZEPASSIVE =
             ABILITIES.register("reze_passive", RezePassive::new);
@@ -255,6 +245,54 @@ public class SMPAbilities {
 
     public static final Supplier<FireballAbility> FIREBALL =
             ABILITIES.register("fireball", FireballAbility::new);
+
+    public static final Supplier<ArrowAbility> ARROW =
+            ABILITIES.register("arrow", ArrowAbility::new);
+
+    public static final Supplier<SummonBigHandsAbility> SUMMON_BIG_HANDS =
+            ABILITIES.register("summon_big_hands", SummonBigHandsAbility::new);
+
+    public static final Supplier<EmberFlight> EMBER_FLIGHT =
+            ABILITIES.register("flight", EmberFlight::new);
+
+    public static final Supplier<EmberFlightBoost> FLIGHT_BOOST =
+            ABILITIES.register("flight_boost", EmberFlightBoost::new);
+
+    public static final Supplier<EmberSustainedFlight> SUSTAINED_FLIGHT =
+            ABILITIES.register("sustained_flight", EmberSustainedFlight::new);
+
+    public static final Supplier<EmberBirdSong> BIRD_SONG =
+            ABILITIES.register("bird_song", EmberBirdSong::new);
+
+    public static final Supplier<EmberJumpBoost> JUMP_BOOST =
+            ABILITIES.register("jump_boost", EmberJumpBoost::new);
+
+    public static final Supplier<HarkenTrueSight> TRUE_SIGHT =
+            ABILITIES.register("true_sight", HarkenTrueSight::new);
+
+    public static final Supplier<HarkenerSilentDash> SILENT_DASH =
+            ABILITIES.register("silent_dash", HarkenerSilentDash::new);
+
+    public static final Supplier<HarkenerWrathfulAdvance> WRATHFUL_ADVANCE =
+            ABILITIES.register("wrathful_advance", HarkenerWrathfulAdvance::new);
+
+    public static final Supplier<AmplifyAbility> AMPLIFY =
+            ABILITIES.register("amplify", AmplifyAbility::new);
+
+    public static final Supplier<ReverseAbility> REVERSE =
+            ABILITIES.register("reverse", ReverseAbility::new);
+
+    public static final Supplier<AriyhomeAbility> HOME =
+            ABILITIES.register("home_coming", AriyhomeAbility::new);
+
+    public static final Supplier<WaterjumpAbility> WJUMP =
+            ABILITIES.register("water_jump", WaterjumpAbility::new);
+
+    public static final Supplier<GroundpunchAbility> GPUNCH =
+            ABILITIES.register("ground_punch", GroundpunchAbility::new);
+
+    public static final Supplier<StrengthrandAbility> SROLL =
+            ABILITIES.register("strength_random", StrengthrandAbility::new);
 
 
     public static void register(IEventBus eventBus) { ABILITIES.register(eventBus); }

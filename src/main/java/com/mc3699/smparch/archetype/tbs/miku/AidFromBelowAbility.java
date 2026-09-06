@@ -44,6 +44,10 @@ public class AidFromBelowAbility extends BaseAbility {
     private int wardenLifetime = 0;
     private boolean startedDigging = false;
 
+    public Warden getSummonedWarden() {
+        return summonedWarden;
+    }
+
     private static BlockPos findSafeSpawnPosition(Level level, Vec3 center) {
         BlockPos centerPos = BlockPos.containing(center);
 
