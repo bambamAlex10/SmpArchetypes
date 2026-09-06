@@ -1,6 +1,6 @@
 package com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidPresence.VoidBlocks.PresenceBlock.Registration;
 
-import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidPresence.VoidPresenceAbility;
+import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidPresenceAbility;
 import com.mc3699.smparch.registry.SMPBlocks;
 import com.mojang.logging.LogUtils;
 

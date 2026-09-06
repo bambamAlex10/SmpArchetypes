@@ -1,14 +1,13 @@
-package com.mc3699.smparch.archetype.fictionalbeef.alivealex.BloodofCovenant;
+package com.mc3699.smparch.archetype.fictionalbeef.ykorio;
 
 import net.mc3699.provenance.ability.foundation.AmbientAbility;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 
-public class BloodofCovenantAmbient extends AmbientAbility {
+public class VoidCasinoAmbient extends AmbientAbility {
 
     @Override
     public void tick(ServerPlayer player) {
-
     }
 
     @Override
@@ -18,7 +17,8 @@ public class BloodofCovenantAmbient extends AmbientAbility {
 
     @Override
     public Component getName() {
-        return Component.literal("Blood of the Covenant");
+        return Component.literal("void_casino");
     }
-
+    
 }
+//todo needs either visual or gambling sfx

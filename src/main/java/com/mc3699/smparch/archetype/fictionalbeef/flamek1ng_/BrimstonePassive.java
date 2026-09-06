@@ -1,4 +1,4 @@
-package com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.Brimstone;
+package com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_;
 
 import net.mc3699.provenance.ability.foundation.AmbientAbility;
 import net.minecraft.network.chat.Component;

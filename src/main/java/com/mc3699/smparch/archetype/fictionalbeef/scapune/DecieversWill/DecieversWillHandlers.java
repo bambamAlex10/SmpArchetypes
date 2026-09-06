@@ -8,10 +8,10 @@ import java.util.UUID;
 import com.mc3699.smparch.SMPArch;
 import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.BigManRakeAttachments;
 import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.BigManRakeSounds;
-import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.Concerto.ConcertoAbility;
+import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.ConcertoAbility;
+import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversGraceAbility;
 import com.mc3699.smparch.archetype.fictionalbeef.scapune.ScapuneAttachments;
 import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversAwareness.DecieversAwarenessHandlers;
-import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversGrace.DecieversGraceAbility;
 import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversGrace.DecieversGhost.DecieversGhostEntity;
 import com.mc3699.smparch.registry.SMPArchetypes;
 

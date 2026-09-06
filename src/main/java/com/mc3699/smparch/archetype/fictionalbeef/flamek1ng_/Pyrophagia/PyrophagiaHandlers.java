@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.mc3699.smparch.SMPArch;
 import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.FlameK1ng_Attachments;
+import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.PyrophagiaPassive;
 import com.mc3699.smparch.registry.SMPAbilities;
 import com.mojang.logging.LogUtils;
 

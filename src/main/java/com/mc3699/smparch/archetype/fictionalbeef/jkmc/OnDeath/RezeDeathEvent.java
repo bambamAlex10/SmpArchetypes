@@ -2,6 +2,7 @@ package com.mc3699.smparch.archetype.fictionalbeef.jkmc.OnDeath;
 
 import com.mc3699.smparch.SMPArch;
 import com.mc3699.smparch.archetype.fictionalbeef.jkmc.JkmcAttachments;
+import com.mc3699.smparch.archetype.fictionalbeef.jkmc.RezeDeathPassive;
 import com.mc3699.smparch.archetype.fictionalbeef.jkmc.ExplosionPassive.ExplosivePassiveHandlers;
 
 import net.mc3699.provenance.ProvenanceDataHandler;

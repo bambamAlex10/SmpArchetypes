@@ -1,10 +1,8 @@
-package com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversFury;
+package com.mc3699.smparch.archetype.fictionalbeef.scapune;
 
 import java.util.Random;
 
 import com.mc3699.smparch.SMPArch;
-import com.mc3699.smparch.archetype.fictionalbeef.scapune.ScapuneAttachments;
-import com.mc3699.smparch.archetype.fictionalbeef.scapune.ScapuneSounds;
 import com.mc3699.smparch.registry.SMPAttachments;
 import com.mc3699.smparch.registry.SMPParticles;
 import com.mc3699.smparch.registry.SMPSounds;

@@ -1,7 +1,7 @@
 package com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidStep.VoidEcho;
 
 import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversGrace.DecieversGhost.DecieversGhostEntity;
-import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidStep.VoidStepAbility;
+import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidStepAbility;
 import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidStep.VoidStepHandlers;
 import com.mc3699.smparch.util.CPMPlugin.CPMReflectionHelper;
 import com.mojang.authlib.GameProfile;

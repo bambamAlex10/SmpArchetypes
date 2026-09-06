@@ -44,9 +44,9 @@ import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.common.util.FakePlayer;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
 
+import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversGraceAbility;
 import com.mc3699.smparch.archetype.fictionalbeef.scapune.ScapuneAttachments;
 import com.mc3699.smparch.archetype.fictionalbeef.scapune.ScapuneSounds;
-import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversGrace.DecieversGraceAbility;
 import com.mc3699.smparch.registry.SMPEntities;
 import com.mc3699.smparch.registry.SMPParticles;
 import com.mc3699.smparch.registry.SMPSounds;

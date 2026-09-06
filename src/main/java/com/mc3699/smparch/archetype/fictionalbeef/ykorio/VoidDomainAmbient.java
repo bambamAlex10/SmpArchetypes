@@ -1,10 +1,10 @@
-package com.mc3699.smparch.archetype.fictionalbeef.jkmc.ExplosionPassive;
+package com.mc3699.smparch.archetype.fictionalbeef.ykorio;
 
 import net.mc3699.provenance.ability.foundation.AmbientAbility;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 
-public class RezePassive extends AmbientAbility {
+public class VoidDomainAmbient extends AmbientAbility {
 
     @Override
     public void tick(ServerPlayer player) {
@@ -17,7 +17,7 @@ public class RezePassive extends AmbientAbility {
 
     @Override
     public Component getName() {
-        return Component.literal("RezePassive");
+        return Component.literal("void_domain");
     }
-
+    
 }

@@ -65,6 +65,7 @@ import com.google.common.collect.Multimap;
 import com.mc3699.smparch.SMPArch;
 import com.mc3699.smparch.archetype.fictionalbeef.alivealex.AliveAlexAttachments;
 import com.mc3699.smparch.archetype.fictionalbeef.alivealex.AliveAlexSounds;
+import com.mc3699.smparch.archetype.fictionalbeef.alivealex.RetributionAbility;
 import com.mc3699.smparch.archetype.fictionalbeef.alivealex.Salvation.SalvationUIOwner.RetributionCount;
 import com.mc3699.smparch.packets.displayTargetDamage;
 

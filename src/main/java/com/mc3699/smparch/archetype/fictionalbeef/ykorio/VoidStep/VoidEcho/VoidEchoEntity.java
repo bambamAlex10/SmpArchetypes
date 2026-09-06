@@ -42,9 +42,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
 import com.mc3699.smparch.archetype.fictionalbeef.scapune.ScapuneSounds;
+import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidStepAbility;
 import com.mc3699.smparch.archetype.fictionalbeef.ykorio.YkorioAttachments;
 import com.mc3699.smparch.archetype.fictionalbeef.ykorio.YkorioSounds;
-import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidStep.VoidStepAbility;
 import com.mc3699.smparch.registry.SMPEntities;
 import com.mc3699.smparch.registry.SMPParticles;
 import com.mc3699.smparch.registry.SMPSounds;

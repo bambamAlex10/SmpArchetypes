@@ -1,4 +1,4 @@
-package com.mc3699.smparch.archetype.fictionalbeef.alivealex.Salvation;
+package com.mc3699.smparch.archetype.fictionalbeef.alivealex;
 
 import java.beans.EventHandler;
 import java.lang.annotation.Target;
@@ -14,9 +14,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import com.mc3699.smparch.SMPArch;
-import com.mc3699.smparch.archetype.fictionalbeef.alivealex.AliveAlexAttachments;
-import com.mc3699.smparch.archetype.fictionalbeef.alivealex.AliveAlexSounds;
 import com.mc3699.smparch.archetype.fictionalbeef.alivealex.BloodofCovenant.BloodofCovenantHandlers;
+import com.mc3699.smparch.archetype.fictionalbeef.alivealex.Salvation.SalvationHandlers;
 import com.mc3699.smparch.archetype.fictionalbeef.alivealex.Salvation.SalvationHandlers.TargetDamage;
 import com.mc3699.smparch.registry.SMPSounds;
 import com.mc3699.smparch.util.DelayedTaskHandler;

@@ -22,6 +22,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerEvent.PlayerLoggedInEven
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 import com.mc3699.smparch.SMPArch;
+import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidDomainAmbient;
 import com.mc3699.smparch.archetype.fictionalbeef.ykorio.YkorioAttachments;
 import com.mojang.logging.LogUtils;
 

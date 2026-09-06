@@ -1,9 +1,8 @@
-package com.mc3699.smparch.archetype.fictionalbeef.alivealex.Retribution;
+package com.mc3699.smparch.archetype.fictionalbeef.alivealex;
 
 import java.time.Instant;
 
 import com.mc3699.smparch.SMPArch;
-import com.mc3699.smparch.archetype.fictionalbeef.alivealex.AliveAlexAttachments;
 import com.mc3699.smparch.registry.SMPAttachments;
 import com.mc3699.smparch.registry.SMPSounds;
 

@@ -1,4 +1,4 @@
-package com.mc3699.smparch.archetype.fictionalbeef.jkmc.RezeLargeHit;
+package com.mc3699.smparch.archetype.fictionalbeef.jkmc;
 
 import net.mc3699.provenance.ability.foundation.BaseAbility;
 import net.minecraft.network.chat.Component;
@@ -6,7 +6,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 
 import com.mc3699.smparch.SMPArch;
-import com.mc3699.smparch.archetype.fictionalbeef.jkmc.JkmcAttachments;
 import com.mc3699.smparch.archetype.fictionalbeef.jkmc.ExplosionPassive.ExplosivePassiveHandlers;
 
 public class RezeLargeHitAbility extends BaseAbility {

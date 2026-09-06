@@ -4,6 +4,7 @@ import javax.annotation.Nullable;
 
 import com.mc3699.smparch.SMPArch;
 import com.mc3699.smparch.archetype.fictionalbeef.jkmc.JkmcAttachments;
+import com.mc3699.smparch.archetype.fictionalbeef.jkmc.RezeLargeHitAbility;
 import com.mc3699.smparch.archetype.fictionalbeef.jkmc.ExplosionPassive.ExplosivePassiveHandlers;
 import com.mojang.logging.LogUtils;
 

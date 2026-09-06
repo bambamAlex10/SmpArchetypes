@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.mc3699.smparch.SMPArch;
+import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.AccelerandoAbility;
 import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.BigManRakeAttachments;
 import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.FlameK1ng_Attachments;
 import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.FlameK1ng_Sounds;

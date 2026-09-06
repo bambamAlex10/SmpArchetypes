@@ -1,11 +1,15 @@
-package com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversAwareness;
+package com.mc3699.smparch.archetype.fictionalbeef.alivealex;
+
 
 import net.mc3699.provenance.ability.foundation.AmbientAbility;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 
-public class DecieversAwarenessPassive extends AmbientAbility {
+public class ConcurrentAbility extends AmbientAbility {
+    @Override
+    public void tick(ServerPlayer player) {
 
+    }
 
     @Override
     public boolean canExecute(ServerPlayer player) {
@@ -14,11 +18,6 @@ public class DecieversAwarenessPassive extends AmbientAbility {
 
     @Override
     public Component getName() {
-        return Component.literal("AccesoMorendo");
+        return Component.literal("Concurrent");
     }
-
-    @Override
-    public void tick(ServerPlayer arg0) {
-    }
-    
 }

@@ -1,4 +1,4 @@
-package com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversWill;
+package com.mc3699.smparch.archetype.fictionalbeef.scapune;
 
 import java.time.Instant;
 import java.util.List;
@@ -6,8 +6,6 @@ import java.util.Optional;
 import java.util.Random;
 
 import com.mc3699.smparch.SMPArch;
-import com.mc3699.smparch.archetype.fictionalbeef.scapune.ScapuneAttachments;
-import com.mc3699.smparch.archetype.fictionalbeef.scapune.ScapuneSounds;
 import com.mc3699.smparch.registry.SMPSounds;
 import com.mojang.logging.LogUtils;
 

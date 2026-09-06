@@ -1,9 +1,8 @@
-package com.mc3699.smparch.archetype.fictionalbeef.jkmc.Propulsion;
+package com.mc3699.smparch.archetype.fictionalbeef.jkmc;
 
 import java.util.Random;
 
 import com.mc3699.smparch.SMPArch;
-import com.mc3699.smparch.archetype.fictionalbeef.jkmc.JkmcAttachments;
 import com.mc3699.smparch.archetype.fictionalbeef.jkmc.ExplosionPassive.ExplosivePassiveHandlers;
 import com.mc3699.smparch.archetype.fictionalbeef.jkmc.RezeLargeHit.RezeLargeHitHandlers;
 import com.mc3699.smparch.registry.SMPSounds;

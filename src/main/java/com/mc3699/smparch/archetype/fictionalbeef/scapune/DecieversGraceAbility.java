@@ -1,9 +1,8 @@
-package com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversGrace;
+package com.mc3699.smparch.archetype.fictionalbeef.scapune;
 
 import java.util.Optional;
 
 import com.mc3699.smparch.SMPArch;
-import com.mc3699.smparch.archetype.fictionalbeef.scapune.ScapuneAttachments;
 import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversGrace.DecieversGhost.DecieversGhostEntity;
 import com.mc3699.smparch.registry.SMPEntities;
 import com.mojang.logging.LogUtils;

@@ -1,10 +1,9 @@
-package com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidStep;
+package com.mc3699.smparch.archetype.fictionalbeef.ykorio;
 
 import java.util.Optional;
 
 import com.mc3699.smparch.SMPArch;
 import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversGrace.DecieversGhost.DecieversGhostEntity;
-import com.mc3699.smparch.archetype.fictionalbeef.ykorio.YkorioAttachments;
 import com.mc3699.smparch.registry.SMPAttachments;
 
 import net.mc3699.provenance.ability.foundation.AmbientAbility;

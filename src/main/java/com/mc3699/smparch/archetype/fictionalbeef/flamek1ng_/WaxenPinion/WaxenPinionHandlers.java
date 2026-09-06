@@ -4,10 +4,11 @@ import java.time.Duration;
 import java.time.Instant;
 
 import com.mc3699.smparch.SMPArch;
+import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.AccelerandoAbility;
 import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.BigManRakeAttachments;
-import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.Accelerando.AccelerandoAbility;
 import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.FlameK1ng_Attachments;
 import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.FlameK1ng_Sounds;
+import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.WaxenPinionActive;
 import com.mc3699.smparch.util.DelayedTaskHandler;
 import com.mojang.logging.LogUtils;
 

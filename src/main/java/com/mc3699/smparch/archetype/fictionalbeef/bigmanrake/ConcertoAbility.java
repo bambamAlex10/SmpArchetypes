@@ -1,11 +1,9 @@
-package com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.Concerto;
+package com.mc3699.smparch.archetype.fictionalbeef.bigmanrake;
 
 import java.time.Instant;
 import java.util.Optional;
 
 import com.mc3699.smparch.SMPArch;
-import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.BigManRakeAttachments;
-import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.BigManRakeSounds;
 import com.mc3699.smparch.registry.SMPAttachments;
 import com.mc3699.smparch.registry.SMPSounds;
 

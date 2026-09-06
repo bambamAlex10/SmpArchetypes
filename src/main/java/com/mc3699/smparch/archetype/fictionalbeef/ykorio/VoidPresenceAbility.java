@@ -1,10 +1,8 @@
-package com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidPresence;
+package com.mc3699.smparch.archetype.fictionalbeef.ykorio;
 
 import java.time.Instant;
 
 import com.mc3699.smparch.SMPArch;
-import com.mc3699.smparch.archetype.fictionalbeef.ykorio.YkorioAttachments;
-import com.mc3699.smparch.archetype.fictionalbeef.ykorio.YkorioSounds;
 import com.mc3699.smparch.registry.SMPAttachments;
 import com.mc3699.smparch.registry.SMPBlocks;
 

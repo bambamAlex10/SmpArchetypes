@@ -1,12 +1,10 @@
-package com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.WaxenPinion;
+package com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_;
 
 import java.util.Random;
 
 import com.mc3699.smparch.SMPArch;
 import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.BigManRakeAttachments;
 import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.BigManRakeSounds;
-import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.FlameK1ng_Attachments;
-import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.FlameK1ng_Sounds;
 import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.Brimstone.BrimstoneHandlers;
 import com.mc3699.smparch.registry.SMPParticles;
 import com.mc3699.smparch.util.DelayedTaskHandler;

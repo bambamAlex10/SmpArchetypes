@@ -9,7 +9,7 @@ import java.util.Set;
 
 import javax.annotation.Nullable;
 
-import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidPresence.VoidPresenceAbility;
+import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidPresenceAbility;
 import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidPresence.VoidPresenceHandlers;
 import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidPresence.VoidBlocks.PresenceBlock.Registration.VoidBlock;
 import com.mc3699.smparch.registry.SMPBlocks;

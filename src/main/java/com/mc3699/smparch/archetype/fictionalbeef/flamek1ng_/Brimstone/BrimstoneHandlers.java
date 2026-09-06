@@ -1,6 +1,7 @@
 package com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.Brimstone;
 
 import com.mc3699.smparch.SMPArch;
+import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.BrimstonePassive;
 import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.FlameK1ng_Attachments;
 import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.FlameK1ng_Sounds;
 import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidStep.VoidStepPayload;

@@ -1,4 +1,4 @@
-package com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.Accelerando;
+package com.mc3699.smparch.archetype.fictionalbeef.bigmanrake;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,6 @@ import javax.annotation.Nullable;
 
 import com.ibm.icu.impl.Pair;
 import com.mc3699.smparch.SMPArch;
-import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.BigManRakeAttachments;
-import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.BigManRakeSounds;
 import com.mc3699.smparch.archetype.fictionalbeef.bigmanrake.Concerto.ConcertoHandlers;
 import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.FlameK1ng_Attachments;
 import com.mc3699.smparch.archetype.fictionalbeef.jkmc.RezeLargeHit.RezeLargeHitHandlers;

@@ -37,6 +37,7 @@ import java.util.ArrayDeque;
 
 import net.neoforged.fml.common.EventBusSubscriber;
 import com.mc3699.smparch.SMPArch;
+import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidPresenceAbility;
 import com.mc3699.smparch.archetype.fictionalbeef.ykorio.YkorioAttachments;
 import com.mc3699.smparch.archetype.fictionalbeef.ykorio.YkorioSounds;
 import com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidPresence.VoidBlocks.PresenceBlock.VoidPresenceBlockEntity;

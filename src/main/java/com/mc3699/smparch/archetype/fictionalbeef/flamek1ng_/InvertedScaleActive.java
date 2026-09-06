@@ -1,9 +1,10 @@
-package com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.InvertedScale;
+package com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_;
 
 import java.time.Instant;
 
 import com.mc3699.smparch.SMPArch;
 import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.Brimstone.BrimstoneHandlers;
+import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.InvertedScale.InvertedScaleHandlers;
 import com.mc3699.smparch.util.DelayedTaskHandler;
 
 import net.mc3699.provenance.ability.foundation.AmbientAbility;

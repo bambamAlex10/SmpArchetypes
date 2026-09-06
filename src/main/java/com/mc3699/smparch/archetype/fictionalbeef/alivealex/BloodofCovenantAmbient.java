@@ -1,13 +1,14 @@
-package com.mc3699.smparch.archetype.fictionalbeef.jkmc.OnDeath;
+package com.mc3699.smparch.archetype.fictionalbeef.alivealex;
 
 import net.mc3699.provenance.ability.foundation.AmbientAbility;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 
-public class RezeDeathPassive extends AmbientAbility {
+public class BloodofCovenantAmbient extends AmbientAbility {
 
     @Override
     public void tick(ServerPlayer player) {
+
     }
 
     @Override
@@ -17,7 +18,7 @@ public class RezeDeathPassive extends AmbientAbility {
 
     @Override
     public Component getName() {
-        return Component.literal("RezeDeath");
+        return Component.literal("Blood of the Covenant");
     }
 
 }

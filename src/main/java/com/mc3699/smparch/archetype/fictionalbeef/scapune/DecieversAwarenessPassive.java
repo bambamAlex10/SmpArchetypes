@@ -1,14 +1,11 @@
-package com.mc3699.smparch.archetype.fictionalbeef.ykorio.VoidCasino;
+package com.mc3699.smparch.archetype.fictionalbeef.scapune;
 
 import net.mc3699.provenance.ability.foundation.AmbientAbility;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 
-public class VoidCasinoAmbient extends AmbientAbility {
+public class DecieversAwarenessPassive extends AmbientAbility {
 
-    @Override
-    public void tick(ServerPlayer player) {
-    }
 
     @Override
     public boolean canExecute(ServerPlayer player) {
@@ -17,8 +14,11 @@ public class VoidCasinoAmbient extends AmbientAbility {
 
     @Override
     public Component getName() {
-        return Component.literal("void_casino");
+        return Component.literal("AccesoMorendo");
+    }
+
+    @Override
+    public void tick(ServerPlayer arg0) {
     }
     
 }
-//todo needs either visual or gambling sfx

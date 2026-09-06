@@ -5,9 +5,9 @@ import java.util.Optional;
 import java.util.UUID;
 
 import com.mc3699.smparch.SMPArch;
-import com.mc3699.smparch.archetype.fictionalbeef.alivealex.Concurrent.ConcurrentAbility;
+import com.mc3699.smparch.archetype.fictionalbeef.alivealex.ConcurrentAbility;
+import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversGraceAbility;
 import com.mc3699.smparch.archetype.fictionalbeef.scapune.ScapuneAttachments;
-import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversGrace.DecieversGraceAbility;
 import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversGrace.DecieversGhost.DecieversGhostEntity;
 
 import net.mc3699.provenance.ProvenanceDataHandler;

@@ -62,6 +62,7 @@ import net.neoforged.neoforge.network.PacketDistributor;
 import com.google.common.collect.Multimap;
 import com.mc3699.smparch.SMPArch;
 import com.mc3699.smparch.archetype.fictionalbeef.alivealex.AliveAlexAttachments;
+import com.mc3699.smparch.archetype.fictionalbeef.alivealex.SalvationAbility;
 import com.mc3699.smparch.packets.displayTargetDamage;
 
 @EventBusSubscriber(modid = SMPArch.MODID)

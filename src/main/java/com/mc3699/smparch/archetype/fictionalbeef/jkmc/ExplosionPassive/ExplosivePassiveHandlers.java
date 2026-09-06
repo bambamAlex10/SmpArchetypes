@@ -5,8 +5,9 @@ import java.util.Set;
 
 import com.mc3699.smparch.SMPArch;
 import com.mc3699.smparch.archetype.fictionalbeef.alivealex.BloodofCovenant.BloodofCovenantHandlers;
-import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.Brimstone.BrimstonePassive;
+import com.mc3699.smparch.archetype.fictionalbeef.flamek1ng_.BrimstonePassive;
 import com.mc3699.smparch.archetype.fictionalbeef.jkmc.JkmcAttachments;
+import com.mc3699.smparch.archetype.fictionalbeef.jkmc.RezePassive;
 import com.mc3699.smparch.archetype.fictionalbeef.scapune.DecieversWill.DecieversWillHandlers;
 import com.mojang.logging.LogUtils;
 
