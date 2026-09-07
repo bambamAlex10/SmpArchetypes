@@ -1,10 +1,13 @@
-package com.mc3699.smparch.archetype.ariytwo6;
+package com.mc3699.smparch.archetype.tbs.ariytwo6;
 
 import com.mc3699.smparch.SMPArch;
+
+import net.mc3699.provenance.ability.foundation.AmbientAbility;
 import net.mc3699.provenance.archetype.foundation.BaseArchetype;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 
+import java.util.List;
 import java.util.Set;
 
 public class AriytwoArchetype extends BaseArchetype {
@@ -21,5 +24,15 @@ public class AriytwoArchetype extends BaseArchetype {
                         SMPArch.path("ground_punch"),
                         SMPArch.path("strength_random")
                      );
+    }
+
+    @Override
+    public List<AmbientAbility> getAmbientAbilities() {
+        return List.of();
+    }
+
+    @Override
+    public List<Component> getDescription() {
+        return List.of();
     }
 }

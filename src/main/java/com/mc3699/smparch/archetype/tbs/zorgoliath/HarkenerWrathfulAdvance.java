@@ -1,4 +1,4 @@
-package com.mc3699.smparch.archetype.zorgoliath;
+package com.mc3699.smparch.archetype.tbs.zorgoliath;
 
 import net.mc3699.provenance.ability.foundation.BaseAbility;
 import net.minecraft.network.chat.Component;

@@ -1,4 +1,4 @@
-package com.mc3699.smparch.archetype.john_generic;
+package com.mc3699.smparch.archetype.tbs.john_generic;
 
 import com.mc3699.smparch.SMPArch;
 import net.mc3699.provenance.ability.foundation.AmbientAbility;

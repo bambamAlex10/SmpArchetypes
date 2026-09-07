@@ -1,4 +1,4 @@
-package com.mc3699.smparch.archetype.teebee;
+package com.mc3699.smparch.archetype.tbs.teebee;
 
 import com.mc3699.smparch.SMPArch;
 import com.mc3699.smparch.registry.SMPAbilities;

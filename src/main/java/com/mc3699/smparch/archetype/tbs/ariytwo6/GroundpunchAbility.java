@@ -1,4 +1,4 @@
-package com.mc3699.smparch.archetype.ariytwo6;
+package com.mc3699.smparch.archetype.tbs.ariytwo6;
 
 import net.mc3699.provenance.ability.foundation.BaseAbility;
 import net.minecraft.core.particles.ParticleTypes;
@@ -75,7 +75,6 @@ public class GroundpunchAbility extends BaseAbility {
         return true;
     }
 
-    @Override
     public int getColor() {
         return 0xFFA500;
     }

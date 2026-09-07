@@ -1,4 +1,4 @@
-package com.mc3699.smparch.archetype.ariytwo6;
+package com.mc3699.smparch.archetype.tbs.ariytwo6;
 
 import com.ibm.icu.impl.CacheValue;
 import net.mc3699.provenance.ability.foundation.BaseAbility;

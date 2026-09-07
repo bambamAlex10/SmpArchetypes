@@ -1,0 +1,383 @@
+{
+  "heartbeat": {
+    "sounds" : [
+      {
+        "name": "smparch:heartbeat"
+      }
+    ]
+  },
+
+  "disruption": {
+    "sounds": [
+      {
+        "name": "smparch:disruption"
+      }
+    ]
+  },
+
+  "slam_fall": {
+    "sounds": [
+      {
+        "name": "smparch:slam_fall"
+      }
+    ]
+  },
+  "queenbee": {
+    "sounds": [
+      {
+        "name": "smparch:scapune/decieversghost/queenbee"
+      }
+    ]
+  },
+  "majik": {
+    "sounds": [
+      {
+        "name": "smparch:ykorio/voidstep/voidsteps"
+      }
+    ]
+  },
+  "voidgamblewin": {
+    "sounds": [
+      {
+        "name": "smparch:ykorio/voidcasino/gamblewin"
+      }
+    ]
+  },
+  "voidgamblelose": {
+    "sounds": [
+      {
+        "name": "smparch:ykorio/voidcasino/gamblefail"
+      }
+    ]
+  },
+  "invertedscalehai": {
+    "sounds": [
+      {
+        "name": "smparch:flameking/invertedscale/hitcounter"
+      }
+    ]
+  },
+  "brimstonecoinflipheads": {
+    "sounds": [
+      {
+        "name": "smparch:flameking/brimstone/coinflipheads"
+      }
+    ]
+  },
+  "brimstonecoinfliptails": {
+    "sounds": [
+      {
+        "name": "smparch:flameking/brimstone/coinfliptails"
+      }
+    ]
+  },
+  "firedash1": {
+    "sounds": [
+      {
+        "name": "smparch:flameking/waxenpinion/firedash1"
+      }
+    ]
+  },
+  "firedash2": {
+    "sounds": [
+      {
+        "name": "smparch:flameking/waxenpinion/firedash2"
+      }
+    ]
+  },
+  "brimstonecoinstart": {
+    "sounds": [
+      {
+        "name": "smparch:flameking/brimstone/coinstart"
+      }
+    ]
+  },
+  "brimstonedeath": {
+    "sounds": [
+      {
+        "name": "smparch:flameking/brimstone/dead"
+      }
+    ]
+  },
+  "shieldhit": {
+    "sounds": [
+      {
+        "name": "smparch:ykorio/voidessence/hitshield"
+      }
+    ]
+  },
+  "shielddown": {
+    "sounds": [
+      {
+        "name": "smparch:ykorio/voidessence/shielddown"
+      }
+    ]
+  },
+  "shieldup": {
+    "sounds": [
+      {
+        "name": "smparch:ykorio/voidessence/shieldraise"
+      }
+    ]
+  },
+  "shieldshatter": {
+    "sounds": [
+      {
+        "name": "smparch:ykorio/voidessence/shoottheshields"
+      }
+    ]
+  },
+  "smokeleaves": {
+    "sounds": [
+      {
+        "name": "smparch:ykorio/voidpresence/smokegoesaway"
+      }
+    ]
+  },
+  "attemptsmokeleave": {
+    "sounds": [
+      {
+        "name": "smparch:ykorio/voidpresence/smokeplayerleave"
+      }
+    ]
+  },
+  "smokestarts": {
+    "sounds": [
+      {
+        "name": "smparch:ykorio/voidpresence/smokesummon"
+      }
+    ]
+  },
+  "yourinsmoke": {
+    "sounds": [
+      {
+        "name": "smparch:ykorio/voidpresence/thefogsong"
+      }
+    ]
+  },
+  "vibrato": {
+    "sounds": [
+      {
+        "name": "smparch:bigmanrake/vibrato/vibrato"
+      }
+    ]
+  },
+  "decieverswill": {
+    "sounds": [
+      {
+        "name": "smparch:scapune/decieverswill/scapdie"
+      }
+    ]
+  },
+  "decieversluck": {
+    "sounds": [
+      {
+        "name": "smparch:scapune/decieverswill/thisisrare"
+      }
+    ]
+  },
+  "decieversdeception": {
+    "sounds": [
+      {
+        "name":"smparch:scapune/decieversdeception/decieversdeception"
+      }
+    ]
+  },
+
+  "qhdone" : {
+    "sounds": [
+      {
+        "name": "smparch:qhdone"
+      }
+    ]
+  },
+
+  "blackout" : {
+    "sounds": [
+      {
+        "name": "smparch:blackout"
+      }
+    ]
+  },
+
+  "heallight" : {
+    "sounds": [
+      {
+        "name": "smparch:heallight"
+      }
+    ]
+  },
+  "birdsong1" : {
+    "sounds": [
+      {
+        "name": "smparch:birdsong1"
+      }
+    ]
+  },
+
+  "chaoticsurge" : {
+    "sounds": [
+      {
+        "name": "smparch:chaoticsurge"
+      }
+    ]
+  },
+
+  "birdsong2" : {
+    "sounds": [
+      {
+        "name": "smparch:birdsong2"
+      }
+    ]
+  },
+
+  "voidblitz" : {
+    "sounds": [
+      {
+        "name": "smparch:voidblitz"
+      }
+    ]
+  },
+  "dietime" : {
+    "sounds": [
+      {
+        "name":"smparch:alivealex/salvation/dietime"
+      }
+    ]
+  },
+  "healtime" : {
+    "sounds": [
+      {
+        "name":"smparch:alivealex/salvation/healtime"
+      }
+    ]
+  },
+  "timepretrigger": {
+    "sounds": [
+      {
+        "name":"smparch:alivealex/salvation/timepretrigger"
+      }
+    ]
+  },
+  "counteractive": {
+    "sounds": [
+      {
+        "name":"smparch:alivealex/retribution/counteractive"
+      }
+    ]
+  },
+  "counterwin": {
+    "sounds": [
+      {
+        "name":"smparch:alivealex/retribution/counterwin"
+      }
+    ]
+  },
+  "counterlose": {
+    "sounds": [
+      {
+        "name":"smparch:alivealex/retribution/counterlose"
+      }
+    ]
+  },
+  "welcomebackvoid": {
+    "sounds": [
+      {
+        "name":"smparch:alivealex/retribution/welcomebackvoid"
+      }
+    ]
+  },
+  "movement1cap": {
+    "sounds": [
+      {
+        "name":"smparch:bigmanrake/concerto/movements/movement1cap"
+      }
+    ]
+  },
+  "movement2cap": {
+    "sounds": [
+      {
+        "name":"smparch:bigmanrake/concerto/movements/movement2cap"
+      }
+    ]
+  },
+  "movement3cap": {
+    "sounds": [
+      {
+        "name":"smparch:bigmanrake/concerto/movements/movement3cap"
+      }
+    ]
+  },
+  "movement4cap": {
+    "sounds": [
+      {
+        "name":"smparch:bigmanrake/concerto/movements/movement4cap"
+      }
+    ]
+  },
+  "movement0cap": {
+    "sounds": [
+      {
+        "name":"smparch:bigmanrake/concerto/movements/movement0cap"
+      }
+    ]
+  },
+  "maextrode" : {
+    "sounds": [
+      {
+        "name": "smparch:bigmanrake/accesomorendo/maextrode"
+      }
+    ]
+  },
+  "acc1" : {
+    "sounds": [
+      {
+        "name": "smparch:bigmanrake/accelerando/acc1"
+      }
+    ]
+  },
+  "acc2" : {
+    "sounds": [
+      {
+        "name": "smparch:bigmanrake/accelerando/acc2"
+      }
+    ]
+  },
+  "orchwork" : {
+    "sounds": [
+      {
+        "name": "smparch:bigmanrake/concerto/orchwork"
+      }
+    ]
+  },
+  "symheadbomb": {
+    "sounds": [
+      {
+        "name":"smparch:bigmanrake/concerto/symheadbomb"
+      }
+    ]
+  },
+  "symchoratk": {
+    "sounds": [
+      {
+        "name":"smparch:bigmanrake/concerto/symchoratk"
+      }
+    ]
+  },
+  
+  "birdsong3" : {
+    "sounds": [
+      {
+        "name": "smparch:birdsong3"
+      }
+    ]
+  },
+
+  "american_woodcock" : {
+    "sounds": [
+      {
+        "name": "smparch:american_woodcock"
+      }
+    ]
+  }
+}

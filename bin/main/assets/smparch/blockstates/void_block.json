@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "smparch:block/void_block" }
+  }
+}
