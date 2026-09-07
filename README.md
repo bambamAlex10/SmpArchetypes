@@ -14,6 +14,8 @@ BigManRake: Lobotomy Corp Slop
 	
   Vibrato - After activation the next hit on an entity will give insanity, or if they already have it give back saturation.
   
+| 
+
 AliveAlex1027: My Kit
 
   Concurrent - passive that makes it so that way mobs do not the user,
@@ -24,6 +26,8 @@ AliveAlex1027: My Kit
 	
   Salvation - ability that saves the damage done to entities for activation later, the activation gives a UI effect for any player and can be blocked.
   
+|
+
 Scapune: Terrorist Kit
 
   DecieversAwareness - passive that makes it so that when another player hits the user their screen disturbs.
@@ -33,7 +37,9 @@ Scapune: Terrorist Kit
   DecieversGrace - active that spawns in a clone of the player and makes the user invisible, acting as a distraction.
 	
   DecieversWill - ultimate ability that will either kamikaze the players life to deploy instant harming, or will activate a rare ability where in return for a set of netherite armor will turn the player into a boss fight for a minute and 30.
-  
+
+|
+
 Ykorio: Dark Gambling Kit
 
   VoidCasino - passive, every hit a small chance to gamble, that gamble has smaller chances to do other things. These other things can be to kill the user or the victim, or activate abilities from other Archetypes.
@@ -45,7 +51,9 @@ Ykorio: Dark Gambling Kit
   VoidPresence - ultimate move, is literally just a domain expansion.
 	
   VoidStep - teleportation that scales with light, if in a darker area can go farther then a lighter one.
-  
+
+| 
+
 JKMC: The Other Terrorist Kit
 
   ExplosionPassive - Passive that changes how breaking blocks work. User has to shift break blocks in order to obtain them but at a slower speed, but when normal breaking user gains meter which can be used in other abilities. Meter gain scales with duration of mining.
@@ -55,7 +63,8 @@ JKMC: The Other Terrorist Kit
   ExplosionPropulsion - Active dash thats the strongest dash of all archetypes, uses meter before switching to health. allows incredibly far travel.
 	
   LargeHit - active that on the next hit does a strong attack depending on whether the player critical, sprint hit, and standing hit.
-	
+  
+|	
 
 FlameK1ng_: Flame Gambling Kit
 
@@ -67,14 +76,23 @@ FlameK1ng_: Flame Gambling Kit
 	
   WaxenPinion - active dash where if the user collides with another entity the entity is hit with damage scaling to the weapon in hand. if the dash rolls heads the entity also has their fire resistance removed if they have it.
   
+|
+
+|
+
+| 
+
 Credits:
 
 The ideas behind most abilities are not my own, I ask the individuals who are going to use these abilities to think of what they want and then I implement them.
-
 Most of the effects and UX work is done by BigManRake who i delegate everything from textures to sound effects to.
+
+|
 
 AI Disclosure:
 
 AI is used in some of the development of this mod, primarily to delegate tasks that would be an expensive use of time to understand (think CPM Compatibility for DecieversGrace and a lot if not all of complex rendering code), but outside of those AI is typically never used. While AI is currently a decisive issue, without the use of it this mods development may have ended at Scapunes abilities.
+
+|
 
 This fork is meant to be independent of everything except its direct dependency Provenance, effects taken from other mods usually check the registry first for that mod and then try to use it, this fork isn't directly dependent on CPM (Customizable Player Mods), Rake Mod, Codmod, etc. 
